@@ -112,4 +112,4 @@ gsettings set org.gnome.desktop.interface cursor-theme 'Vimix-white-cursors'
 
 cd ~
 rm -rf ~/temp_files
-cd &current_dir
+cd $current_dir
