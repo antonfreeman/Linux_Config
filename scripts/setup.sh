@@ -72,6 +72,8 @@ git clone https://github.com/vinceliuice/Layan-gtk-theme.git
 cd Layan-gtk-theme
 ./install.sh
 
+gsettings set org.gnome.shell.extensions.user-theme name 'Layan'
+
 
 cd ~/temp_files
 git clone https://github.com/vinceliuice/Canvas-theme.git
@@ -110,4 +112,4 @@ gsettings set org.gnome.desktop.interface cursor-theme 'Vimix-white-cursors'
 
 cd ~
 rm -rf ~/temp_files
-cd current_dir
+cd &current_dir
