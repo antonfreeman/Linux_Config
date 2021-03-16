@@ -1,6 +1,8 @@
-import os
+import getpass
 
-bashrc = open(".bashrc", 'a')
+user = getpass.getuser()
+path = "/home/" + user + "/.bashrc"
+bashrc = open(path, 'a+')
 
 to_write = """
 # ===========================================
@@ -168,4 +170,5 @@ finder()
 
 bashrc.write(to_write)
 
-os.system("apt install wireshark")
+bashrc.close()
+

@@ -1,12 +1,7 @@
 # ------------------------------------------------------------------------------
-#  Install Variables
-# ------------------------------------------------------------------------------
-
-current_dir=$(pwd)
-
-# ------------------------------------------------------------------------------
 #  Apps
 # ------------------------------------------------------------------------------
+
 sudo apt update
 sudo apt install python3-pip -y
 sudo apt install git -y
@@ -26,20 +21,19 @@ sudo apt install python3-pip -y
 
 
 # ------------------------------------------------------------------------------
+#  Extensions
+# ------------------------------------------------------------------------------
+sudo apt install gnome-shell-extensions -y
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
+sudo apt install bash-completion -y
+
+
+# ------------------------------------------------------------------------------
 #  Aliases and functions
 # ------------------------------------------------------------------------------
 
 python set_bashrc.py
 
-# ------------------------------------------------------------------------------
-#  Extensions
-# ------------------------------------------------------------------------------
-sudo apt install gnome-shell-extensions -y
-gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
-
-
-sudo apt install bash-completion -y
-echo "source /etc/profile.d/bash_completion.sh" >> ~/.bashrc
 
 # ------------------------------------------------------------------------------
 #  Desktop Background
@@ -47,7 +41,7 @@ echo "source /etc/profile.d/bash_completion.sh" >> ~/.bashrc
 
 cd ../wallpapers
 gsettings set org.gnome.desktop.background picture-uri "file://$(pwd)/wallpaper.jpg"
-gsettings set org.gnome.desktop.screensaver picture-uri "file://$(pwd)/wallpaper2.jpg"
+gsettings set org.gnome.desktop.screensaver picture-uri "file://$(pwd)/wallpaper2.png"
 cd ../scripts
 
 
@@ -112,4 +106,35 @@ gsettings set org.gnome.desktop.interface cursor-theme 'Vimix-white-cursors'
 
 cd ~
 rm -rf ~/temp_files
-cd $current_dir
+
+
+# ------------------------------------------------------------------------------
+#  Download/Setup Personal GitHub Repos
+# ------------------------------------------------------------------------------
+
+if [ ! -d ~/*ode ] 
+then
+    mkdir ~/code
+fi
+
+cd ~/code
+
+
+if [ ! -d OS-TEST-SUIT ] 
+then
+    git clone https://github.com/antonfreeman/OS-TEST-SUIT.git
+fi
+
+
+if [ ! -d AI_Projects ] 
+then
+    git clone https://github.com/antonfreeman/AI_Projects.git
+fi
+
+
+if [ ! -d CS_465_Team_5 ] 
+then
+    git clone https://github.com/antonfreeman/CS_465_Team_5.git
+fi
+
+
