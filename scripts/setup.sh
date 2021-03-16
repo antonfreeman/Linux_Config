@@ -47,7 +47,9 @@ echo "source /etc/profile.d/bash_completion.sh" >> ~/.bashrc
 
 cd ../wallpapers
 gsettings set org.gnome.desktop.background picture-uri "file://$(pwd)/wallpaper.jpg"
+gsettings set org.gnome.desktop.screensaver picture-uri "file://$(pwd)/wallpaper2.jpg"
 cd ../scripts
+
 
 # ------------------------------------------------------------------------------
 #  Themes and Fonts
@@ -62,6 +64,9 @@ git clone https://github.com/vinceliuice/Tela-icon-theme.git
 cd Tela-icon-theme
 ./install.sh -a
 
+gsettings set org.gnome.desktop.interface icon-theme 'Tela-red-dark'
+
+
 cd ~/temp_files
 git clone https://github.com/vinceliuice/Layan-gtk-theme.git
 cd Layan-gtk-theme
@@ -73,6 +78,7 @@ git clone https://github.com/vinceliuice/Canvas-theme.git
 cd Canvas-theme
 ./Install
 
+gsettings set org.gnome.desktop.interface gtk-theme 'Canvas-dark'
 
 cd ~/temp_files
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git
@@ -98,7 +104,9 @@ cp *.ttf ~/.local/share/fonts/
 cd ~/temp_files
 git clone https://github.com/vinceliuice/Vimix-cursors.git
 cd Vimix-cursors
-cp *.ttf ~/.local/share/fonts/
+sudo ./install.sh
+
+gsettings set org.gnome.desktop.interface cursor-theme 'Vimix-white-cursors' 
 
 cd ~
 rm -rf ~/temp_files
