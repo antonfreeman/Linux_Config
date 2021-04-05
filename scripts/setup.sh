@@ -27,6 +27,12 @@ sudo apt install gnome-shell-extensions -y
 gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 sudo apt install bash-completion -y
 
+# ------------------------------------------------------------------------------
+#  Git setup
+# ------------------------------------------------------------------------------
+git config --global user.name "Anton Freeman"
+git config --global user.email asfreeman12@gmail.com
+
 
 # ------------------------------------------------------------------------------
 #  Aliases and functions
