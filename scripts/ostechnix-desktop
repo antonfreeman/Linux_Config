@@ -1,0 +1,65 @@
+[apps/update-manager]
+first-run=false
+launch-count=1
+launch-time=int64 1618733106
+
+[com/ubuntu/SoftwareProperties]
+goa-account-id='account_1618733065_0'
+
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1618733093
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2021-04-18T08:07:53+00'
+
+[org/gnome/deja-dup/file]
+migrated=true
+
+[org/gnome/desktop/background]
+picture-uri='file:///home/anton/Desktop/Linux_Config/wallpapers/wallpaper.jpg'
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'us')]
+xkb-options=@as []
+
+[org/gnome/desktop/interface]
+cursor-theme='Vimix-white-cursors'
+gtk-im-module='ibus'
+gtk-theme='Canvas-dark'
+icon-theme='Tela-red-dark'
+
+[org/gnome/desktop/notifications]
+application-children=['gnome-printers-panel', 'update-manager']
+
+[org/gnome/desktop/notifications/application/gnome-printers-panel]
+application-id='gnome-printers-panel.desktop'
+
+[org/gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
+
+[org/gnome/desktop/privacy]
+report-technical-problems=true
+
+[org/gnome/desktop/screensaver]
+picture-uri='file:///home/anton/Desktop/Linux_Config/wallpapers/wallpaper2.png'
+
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=false
+
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+
+[org/gnome/shell]
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com']
+
+[org/gnome/shell/extensions/user-theme]
+name='Layan'
+
+[org/gnome/system/location]
+enabled=false
