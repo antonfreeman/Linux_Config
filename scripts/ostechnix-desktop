@@ -17,7 +17,7 @@ prompt-check='2021-04-18T08:07:53+00'
 migrated=true
 
 [org/gnome/desktop/background]
-picture-uri='file:///home/anton/Desktop/Linux_Config/wallpapers/wallpaper.jpg'
+picture-uri='file://home/anton/Desktop/Linux_Config/wallpapers/wallpaper.jpg'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us')]
